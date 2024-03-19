@@ -1,8 +1,4 @@
 import string
-ha = "ሇ"
-def letterToNumber(m):
-    return string.ascii_lowercase.index(m)
-print(ord(ha))
 def encrypt(plainText,key):
     cipherText = ""
     for letter in plainText:
