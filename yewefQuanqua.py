@@ -16,5 +16,12 @@ def decrypt(cipherText,key):
             even = True
     return plainText
 
+def attack(cipherText):
+    plainText = ""
+    i=0
+    for letter in cipherText:
+        if(i%2 == 0):
+            plainText += letter
+        i+=1
 print(encrypt("ለሉሊላሌልሎሏ","ሀ"))
 print(decrypt("ለሀሉሁሊሂላሃሌሄልህሎሆሏሇ","U"))
