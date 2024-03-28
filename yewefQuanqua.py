@@ -1,10 +1,12 @@
 import string
+
 def encrypt(plainText,key):
     cipherText = ""
     for letter in plainText:
         vowel = (ord(letter)-4608)%8
         cipherText+=(letter+chr(ord(key)+vowel))
     return cipherText
+
 def decrypt(cipherText,key):
     plainText = ""
     even = True
@@ -27,5 +29,5 @@ def attack(cipherText):
 
 # Test Cases
 print(encrypt("ለሉሊላሌልሎሏ","ሀ"))
-print(decrypt("ለሀሉሁሊሂላሃሌሄልህሎሆሏሇ","U"))
 print(attack("ለሀሉሁሊሂላሃሌሄልህሎሆሏሇ"))
+print(decrypt("ለሀሉሁሊሂላሃሌሄልህሎሆሏሇ","U"))
