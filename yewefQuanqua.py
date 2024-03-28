@@ -23,5 +23,9 @@ def attack(cipherText):
         if(i%2 == 0):
             plainText += letter
         i+=1
+    return plainText
+
+# Test Cases
 print(encrypt("ለሉሊላሌልሎሏ","ሀ"))
 print(decrypt("ለሀሉሁሊሂላሃሌሄልህሎሆሏሇ","U"))
+print(attack("ለሀሉሁሊሂላሃሌሄልህሎሆሏሇ"))
