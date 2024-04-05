@@ -3,7 +3,9 @@ import string
 def encrypt(plainText,key):
     cipherText = ""
     for letter in plainText:
+        # find the vowel of the key that correlates with current charachter
         vowel = (ord(letter)-4608)%8
+        # concatinate the vowel with the letter
         cipherText+=(letter+chr(ord(key)+vowel))
     return cipherText
 
@@ -28,6 +30,7 @@ def attack(cipherText):
     return plainText
 
 # Test Cases
+# print(encrypt("ለሉሊላሌልሎሏ","H"))
 print(encrypt("ለሉሊላሌልሎሏ","ሀ"))
-print(attack("ለሀሉሁሊሂላሃሌሄልህሎሆሏሇ"))
 print(decrypt("ለሀሉሁሊሂላሃሌሄልህሎሆሏሇ","U"))
+print(attack("ለሀሉሁሊሂላሃሌሄልህሎሆሏሇ"))
